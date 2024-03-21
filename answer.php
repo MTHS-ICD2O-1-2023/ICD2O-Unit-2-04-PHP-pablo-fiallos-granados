@@ -33,7 +33,7 @@
               $base = $_POST["base"];
               $height = $_POST["height"];
             
-              echo "Area = " . $base * $height . " units squared";
+              echo "Area = " . $base * $height / 2 . " units squared";
             ?>
           </div>
         </div>
