@@ -28,24 +28,14 @@
           <img src="./images/area_of_trinagle.png" alt="triangle" width="250" />
         </div>
         <div class="page-content-php">
-          <form action="answer.php" method="POST">
-            <p>Base</p>
-            <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="base">
-              <label class="mdl-textfield__label" for="base-input">enter...</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <br />
-            <p>Height</p>
-            <div class="mdl-textfield mdl-js-textfield">
-              <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="height">
-              <label class="mdl-textfield__label" for="height-input">enter...</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <br />
-            <!-- Accent-colored raised button with ripple -->
-            <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-          </form>
+          <div id="user-info">
+            <?php
+              $base = $_POST["base"];
+              $height = $_POST["height"];
+            
+              echo "Area = " . $base * $height . " units squared";
+            ?>
+          </div>
         </div>
       </main>
     </div>
